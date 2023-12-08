@@ -12,8 +12,10 @@
     <script src="{% static 'myapp/js/script.js' %}"></script>
 </head>
 <body>
-    <button onclick="startListening()" id="record"><i class="fas fa-microphone"></i></button>
+    <button onclick="startListening()" id="record"><i class="fas fa-microphone mic"></i></button>
     <br>
-    <textarea id="result"></textarea>
+    <div id="result-div">
+        <input type="text" id="result"></input>
+    </div>
 </body>
 </html>

@@ -1,14 +1,21 @@
 from django.shortcuts import render
 from django.http import JsonResponse
 import speech_recognition as sr
+import pyttsx3
 
 r = sr.Recognizer()
 
 def index(request):
     return render(request, 'myapp/index.html')
 
+def Speak(command):
+    engine = pyttsx3.init()
+    engine.say(command)
+    engine.runAndWait()
+
 def get_audio(request):
     if request.method == 'POST':
+        Speak("hello, i'm axl your personal translator")
         with sr.Microphone() as source:
             r.adjust_for_ambient_noise(source, duration=0.2)
             try:
