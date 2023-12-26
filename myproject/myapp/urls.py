@@ -17,7 +17,6 @@ Including another URLconf
 
 from django.urls import path
 from .views import index, get_audio
-
 urlpatterns = [
     path('', index, name='index'),
     path('get_audio/', get_audio, name='get_audio'),

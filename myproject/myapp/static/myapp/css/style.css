@@ -15,14 +15,40 @@ body {
     color: #fff;
 }
 
-#result{
-    resize: none;
+#result-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F2F2F2;
     width: 70%;
     max-width: 700px;
     aspect-ratio: 16/2;
     border-radius: 2rem;
 }
 
+#result{
+    resize: none;
+    width: 80%;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: large;
+    background-color: #F2F2F2;
+}
+
 #record{
-    
+    padding: 15px;
+    width: 15%;
+    max-width: 70px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    transition: .2s;
+}#record:hover{
+    background-color: #016FB9;
+    color: #F2F2F2;
+    transition: .2s;
+}
+
+.mic{
+    scale: 2;
 }
